@@ -5,6 +5,7 @@ A simple and efficient Currency Converter Application built using Python, Tkinte
 Features
 
 Real-time currency conversion using REST API
+
 Clean and user-friendly Tkinter GUI
 Supports major currencies (USD, INR, EUR, GBP, AED, JPY, etc.)
 Displays last updated timestamp using datetime
