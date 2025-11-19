@@ -25,8 +25,8 @@ File handling (optional)
 JSON menu storage (optional)
 ---
 # Project Description
-
 -* This is a Python console application that simulates a small cafe ordering system.
+
 -* All food items and prices are stored in a dictionary.
 -* Users can view the menu, order items, and receive a total bill.
 The program flow includes:
