@@ -1,7 +1,7 @@
 ## 🌍 Currency Converter – Python Tkinter Project
 This Currency Converter project is a desktop application built using Python. It allows users to convert values from one currency to another using live exchange rates fetched through an external API. The application uses a graphical user interface (GUI) created with Tkinter, enhanced with images using Pillow, and displays real-time date and time using the Datetime module.
 
-![image alt]()
+![image alt](pictures/WhatsApp Image 2025-11-19 at 21.25.24 (1).jpeg)
 
 -------------
 
