@@ -33,8 +33,11 @@ Technology & Usage
 CURRENCY-CONVERTER
 
 ├── pictures
+
 ├── currency.png 
+
 ├── CURRENCY.PY 
+
 ├── README.md 
 
 ----------------- 
