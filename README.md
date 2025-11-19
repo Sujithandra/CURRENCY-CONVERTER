@@ -219,7 +219,7 @@ Why Pillow?
    - Calculates conversion:
 1. Converted Value = Input Amount × API Rate
 1. Displays converted output
-    ![image alt]
+    ![image alt](https://github.com/Sujithandra/CURRENCY-CONVERTER/blob/962c58a4902ab1f4b53f451c907cd90552d92446/pictures/WhatsApp%20Image%202025-11-19%20at%2021.25.23.jpeg)
 1. Shows the timestamp of the conversion
 
 ## 📚 Currencies Supported
