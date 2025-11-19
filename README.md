@@ -28,6 +28,15 @@ Technology & Usage
 - Pillow (PIL)  --	  Displaying images
 - Datetime   --   	Showing last updated time
 
+-----------------------
+## 📁 Project Structure
+CURRENCY-CONVERTER
+
+├── pictures
+├── currency.png 
+├── CURRENCY.PY 
+├── README.md 
+
 ----------------- 
 ## 📦 Detailed Module Explanation
 Below is a detailed explanation of every module used in this project
