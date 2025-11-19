@@ -211,6 +211,7 @@ Why Pillow?
 
 1. User enters an amount
 1. Selects the “From Currency”
+   ![image alt](https://github.com/Sujithandra/CURRENCY-CONVERTER/blob/4a851e5c8e4c132c4ef9ddead04bec2c54242149/pictures/WhatsApp%20Image%202025-11-19%20at%2021.25.24.jpeg)
 1. Selects the “To Currency”
 1. User clicks Convert button
 1. Application sends request to API
@@ -218,6 +219,7 @@ Why Pillow?
    - Calculates conversion:
 1. Converted Value = Input Amount × API Rate
 1. Displays converted output
+    ![image alt]
 1. Shows the timestamp of the conversion
 
 ## 📚 Currencies Supported
