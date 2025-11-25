@@ -1,38 +1,44 @@
-import tkinter as tkinter
-from tkinter import *
-from tkinter import tkinter
-from datatime import datetime
-import requests
-from PIL import ImageTK, Image
-from tkinter import messagebox
+import tkinter as tk # Alies name
+from tkinter import *  # importing all functions from tkinter
+from datatime import datetime # used to import time & date
+import requests  # used to send the request to server
+from PIL import ImageTK, Image # used to import images
+from tkinter import messagebox # give the message when no data is entered
 
-root=tk.Tk()
-root.geometry("700*270")
+root=tk.Tk()    # work space is root , before using tkinter module we have create work space
+root.geometry("700*270")   # application size
 root.title("currency converter")
-root.iconbitmap('icon.ico')
+root.iconbitmap('icon.ico')  # displaying icon, icon.ico is file name
 root.minsize(600,270)
 
 image=Image.open('currency.png')
 zoom=0.5
 
-pixels_x, pixels_y, =tuple([int(zoom * x) for x in image.size])
+# Environment is set or foxed
 
-img=ImageTK.photo.PhotoImage(image.resize((pixels_x, pixels_y)))
-panel= Label(root, image=img)
-panel.place(x=190,y=35)
 
-def show_data():
-    amount = E1.get()
+pixels_x, pixels_y, =tuple([int(zoom * x) for x in image.size])  #we take tuple, because of pillow expert tuple value (width,height)
+                                                                 #This loops over each value in image.size , → first x = width, second x = height
+                                                                # Multiplies each by zoom (a scaling factor) , Converts the result to int
+
+img=ImageTK.photo.PhotoImage(image.resize((pixels_x, pixels_y))) #Takes a tuple (new_width, new_height), Returns a resized image
+                                                                 # ImageTk.PhotoImage does (Converts the PIL image into a Tkinter-compatible image object
+panel= Label(root, image=img)  # label font, because of to adjust the size of the image
+panel.place(x=190,y=35)  # address, to place the image
+
+
+def show_data():  # function for getting values
+    amount = E1.get()  # get function used to get the data
     from_currency = c1.get()
     to_currency = c2.get()
-    url= 'https://api.exchangerate-api.com/v4/latest/USD'
+    url= 'https://api.currencylayer.com/live?access_key=473d2c37f738367f08780b934ce7dda&format=1'
 
     if amount == " ":
         messagebox.showerror("currency converter","please fill the amount")
     elif to_currency == " ":
         messagebox.showerror("currency converter","pleasse fill the currency")
     else:
-        data= request.get(url).json()
+        data= request.get(url).json() # data in that url in json formate, passing request to that url
         currency=from_currency.strip()+to_currency.strip()
         amount=int(amount)
         cc=data['quotes'][currency]
