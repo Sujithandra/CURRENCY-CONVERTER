@@ -41,17 +41,17 @@ def show_data():  # function for getting values
         data= request.get(url).json() # data in that url in json formate, passing request to that url
         currency=from_currency.strip()+to_currency.strip()
         amount=int(amount)
-        cc=data['quotes'][currency]
+        cc=data['quotes'][currency]  # is used to mension particular currency
         cur_conv=cc*amount
         E2.insert(0,cur_conv)
-        total.insert('end',f'{amount}united state Dollar Equals{cur_conv} {to_currency} \n\n last time update --- \t {datetime.now()}')
+        total.insert('end',f'{amount}united state Dollar Equals{cur_conv} {to_currency} \n\n last time update --- \t {datetime.now()}')  # it displays in show boxs
 
 def clear():
     E1.delete(0,'end')
     E2.delete(0,'end')
     text.delete(1.0,'end')
 
-l1=label(root,text="USD currency converter", font=('Timesnewroman', '10', 'bold'))
+l1=label(root,text="USD currency converter", font=('Timesnewroman', '10', 'bold'))  # Tkinter uses a parent–child structure
 l1.place(x=150,y=15)
 
 amt=label(root,text="Amount",font=('roboto',10,'bold'))
@@ -61,7 +61,7 @@ E1.place(x=20,y=40)
 
 c1=tk.Stringvar()
 c2=tk.Stringvar()
-currencychoose1 =ttk.Combobox(root, width=20, textvarible= c1, state='readonly', font=('roboto',10,'bold'))
+currencychoose1 =ttk.Combobox(root, width=20, textvarible= c1, state='readonly', font=('roboto',10,'bold'))  # dropdown menu
 
 # Adding combox drop down list
 
@@ -83,10 +83,10 @@ currencychoose2.current()
 text=Text(root,heigth=7,widht=54,font=('Timesnewroman','10','bold'))
 text.place(x=100,y=120)
 
-B= Button(root,text="search",command=show+date, font=('Timesnewe=roman', '10','bold'))
+B= Button(root,text="search",command=show+date, font=('Timesnewe=roman', '10','bold'))  # search button
 B.place(x=20,y=120)
 
-clear =Button (root,text="clear", command=clear, font=('Timesnewe=roman', '10','bold'))
+clear =Button (root,text="clear", command=clear, font=('Timesnewe=roman', '10','bold'))  # clear button
 clear.place(x=20,y=120)
 
 root.mainloop()
